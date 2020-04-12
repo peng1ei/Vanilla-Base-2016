@@ -35,9 +35,11 @@
 Debug
 Release
 Build
+x64
 .vs
 */Debug
 */Release
+*/x64
 
 *VC*db
 *.user
