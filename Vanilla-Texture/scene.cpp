@@ -1,6 +1,8 @@
 #include "scene.h"
 #include "texture.h"
 
+Texture texture;
+
 void Init() {
 	// 设置投影矩阵
 	glMatrixMode(GL_PROJECTION);
@@ -93,8 +95,7 @@ void Init() {
 
 	///![0]
 
-	Texture texture;
-	texture.Init("test.bmp");
+	texture.Init("../Assets/test.bmp");
 }
 
 void Draw() {
@@ -104,17 +105,26 @@ void Draw() {
 	// 绘制之前清除颜色缓冲区
 	glClear(GL_COLOR_BUFFER_BIT);
 
+	// 开启纹理功能
+	glEnable(GL_TEXTURE_2D);
+	glBindTexture(GL_TEXTURE_2D, texture.mTextureID);
+
 	// 立即绘图模式
 	glBegin(GL_TRIANGLES);
 
 	// 漫反射和镜面反射和法线都有关系
 	glNormal3f(0.0f, 1.0f, 0.0f);
+	glTexCoord2f(0.0f, 0.0f);
 	glVertex3f(-1.0, -0.5, Z_PLAN+3);
 
 	glNormal3f(0.0f, 1.0f, 0.0f);
+	glTexCoord2f(1.0f, 0.0f);
 	glVertex3f(1.0, -0.5, Z_PLAN+3);
 
 	glNormal3f(0.0f, 1.0f, 0.0f);
+	glTexCoord2f(0.5f, 1.0f);
 	glVertex3f(0.0, -0.5f, Z_PLAN-5.0);
 	glEnd();
+
+	glBindTexture(GL_TEXTURE_2D, 0);
 }

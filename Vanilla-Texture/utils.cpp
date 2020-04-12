@@ -9,7 +9,7 @@ unsigned char* LoadFileContent(const char *file) {
 		fseek(pFile, 0, SEEK_END);
 		int nLen = ftell(pFile);
 		if (nLen > 0) {
-			rewind(0);
+			rewind(pFile);
 			fileContext = new unsigned char[nLen + 1];
 			fread(fileContext, sizeof(unsigned char), nLen, pFile);
 			fileContext[nLen] = '\0';
