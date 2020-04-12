@@ -57,6 +57,7 @@ void Texture::Init(const char *file) {
 	glBindTexture(GL_TEXTURE_2D, mTextureID);
 
 	// operation on current texture
+	// https://blog.csdn.net/ziyuanxiazai123/article/details/51457675 -- 纹理讲解
 	// 设定 Filter 参数，放大(Magnification)缩小(Minification)时纹理的处理方法
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER/*放大*/, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER/*缩小*/, GL_LINEAR);
