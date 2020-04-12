@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# dir
+Debug
+Release
+Build
+.vs
+*/Debug
+*/Release
+
+*VC*db
