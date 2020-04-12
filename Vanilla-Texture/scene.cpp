@@ -114,7 +114,7 @@ void Draw() {
 
 	// 漫反射和镜面反射和法线都有关系
 	glNormal3f(0.0f, 1.0f, 0.0f);
-	glTexCoord2f(0.0f, 0.0f);
+	glTexCoord2f(0.0f, 0.0f); // 给顶点绑定纹理坐标
 	glVertex3f(-1.0, -0.5, Z_PLAN+3);
 
 	glNormal3f(0.0f, 1.0f, 0.0f);
