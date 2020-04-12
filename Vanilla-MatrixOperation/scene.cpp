@@ -55,11 +55,20 @@ void Draw() {
 
 	// 设置模型矩阵
 	// 一般顺序为：缩放 -> 旋转 -> 平移
+	//glScalef(1.0f, 1.0, 1.0f);
+	//glRotatef(30.0f, 0.0f, 0.0f, 1.0f);
+	//glTranslatef(1.0f, -1.0, 0.0f);
+
+	// 使用 glPushMatrix，则后续的所有的操作都是针对栈顶的矩阵进行
+	// glPushMatrix 可以嵌套
+	glPushMatrix();
+	
+	// 随意交换旋转和平移的顺序会导致不同的结果
+	// 矩阵计算对矩阵出现的顺序有关系，不能随意更改矩阵顺序
 	glScalef(1.0f, 1.0, 1.0f);
-	glRotatef(30.0f, 0.0f, 0.0f, 1.0f);
+	glRotatef(90.0f, 0.0f, 0.0f, 1.0f);
 	glTranslatef(1.0f, -1.0, 0.0f);
-	
-	
+
 	// 立即绘图模式
 	glBegin(GL_TRIANGLES);
 	glColor4ub(255, 0, 0, 255);
@@ -71,4 +80,6 @@ void Draw() {
 	glColor4ub(0, 0, 255, 255);
 	glVertex3f(1.0, 0.0f, Z_PLAN);
 	glEnd();
+
+	glPopMatrix();
 }
