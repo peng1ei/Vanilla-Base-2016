@@ -155,9 +155,17 @@ void ObjModel::Draw()
 	// 线框模式
 	//glPolygonMode(GL_FRONT_AND_BACK /*GL_FRONT*/, GL_LINE);
 
+	// 让地球自转
+	static float angle = 0.0f;
+	angle += 0.02f;
+	if (angle >= 360.0f) {
+		angle = 0.0f;
+	}
+
 	// 在这里使用 push 和 pop Matrix 是为了不影响外面的矩阵
 	glPushMatrix();
 	glTranslatef(0.0f, 0.0f, -3.0f);
+	glRotatef(angle, 0.0f, 1.0f, 0.0f);
 
 	glBegin(GL_TRIANGLES);
 	for (int i = 0; i < mIndexCount; ++i) {

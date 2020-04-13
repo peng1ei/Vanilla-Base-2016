@@ -81,7 +81,7 @@ void Init(int width, int height) {
 	float whiteColor[] = { 1.0f, 1.0f, 1.0f, 1.0f };
 	glLightfv(GL_LIGHT0, GL_AMBIENT, whiteColor);  // 环境光
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, whiteColor);  // 漫反射光
-	glLightfv(GL_LIGHT0, GL_SPECULAR, blackColor); // 镜面反射光
+	glLightfv(GL_LIGHT0, GL_SPECULAR, whiteColor); // 镜面反射光
 
 	// 设置光源类型
 	//	direction light -- 方向光，如太阳光
@@ -95,16 +95,16 @@ void Init(int width, int height) {
 	// 全黑{ 0.0f, 0.0f, 0.0f, 1.0f } -- 什么都不反射，一片漆黑
 	float blackMaterial[] = { 0.0f, 0.0f, 0.0f, 1.0f };
 	float ambientMaterial[] = { 0.1f, 0.1f, 0.1f, 1.0f };
-	float diffuseMaterial[] = { 0.1f, 0.3f, 0.6f, 1.0f };
+	float diffuseMaterial[] = { 0.8f, 0.8f, 0.8f, 1.0f };
 	float specularMaterial[] = { 0.9f, 0.9f, 0.9f, 1.0f };
-	glMaterialfv(GL_FRONT, GL_AMBIENT, ambientMaterial);
+	glMaterialfv(GL_FRONT, GL_AMBIENT, blackMaterial);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuseMaterial);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, specularMaterial);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, blackMaterial);
 	glMaterialf(GL_FRONT, GL_SHININESS, 128.0f); // 镜面反射，光斑
 
 	///![0]
 
-	texture.Init("../Assets/test.bmp");
+	texture.Init("../Assets/earth.bmp");
 	model.Init("../Assets/Sphere.obj"); // Sphere.obj Quad.obj
 }
 
@@ -116,9 +116,9 @@ void Draw() {
 	// 绘制之前清除颜色缓冲区
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	//glEnable(GL_TEXTURE_2D);
-	//glBindTexture(GL_TEXTURE_2D, texture.mTextureID);
+	glEnable(GL_TEXTURE_2D);
+	glBindTexture(GL_TEXTURE_2D, texture.mTextureID);
 	model.Draw();
 
-	//glBindTexture(GL_TEXTURE_2D, 0);
+	glBindTexture(GL_TEXTURE_2D, 0);
 }
