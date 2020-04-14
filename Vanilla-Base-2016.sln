@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vanilla-Camera", "Vanilla-C
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vanilla-SOIL", "Vanilla-SOIL\Vanilla-SOIL.vcxproj", "{07CD7C50-0433-4EB2-A6F5-49343EEDA7BE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vanilla-SkyBox", "Vanilla-SkyBox\Vanilla-SkyBox.vcxproj", "{D7CFB377-1BF4-4FF4-B899-B024E46A24BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{07CD7C50-0433-4EB2-A6F5-49343EEDA7BE}.Release|x64.Build.0 = Release|x64
 		{07CD7C50-0433-4EB2-A6F5-49343EEDA7BE}.Release|x86.ActiveCfg = Release|Win32
 		{07CD7C50-0433-4EB2-A6F5-49343EEDA7BE}.Release|x86.Build.0 = Release|Win32
+		{D7CFB377-1BF4-4FF4-B899-B024E46A24BA}.Debug|x64.ActiveCfg = Debug|x64
+		{D7CFB377-1BF4-4FF4-B899-B024E46A24BA}.Debug|x64.Build.0 = Debug|x64
+		{D7CFB377-1BF4-4FF4-B899-B024E46A24BA}.Debug|x86.ActiveCfg = Debug|Win32
+		{D7CFB377-1BF4-4FF4-B899-B024E46A24BA}.Debug|x86.Build.0 = Debug|Win32
+		{D7CFB377-1BF4-4FF4-B899-B024E46A24BA}.Release|x64.ActiveCfg = Release|x64
+		{D7CFB377-1BF4-4FF4-B899-B024E46A24BA}.Release|x64.Build.0 = Release|x64
+		{D7CFB377-1BF4-4FF4-B899-B024E46A24BA}.Release|x86.ActiveCfg = Release|Win32
+		{D7CFB377-1BF4-4FF4-B899-B024E46A24BA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
