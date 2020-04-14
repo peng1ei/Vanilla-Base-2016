@@ -157,6 +157,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="camera.h" />
+    <ClInclude Include="displaylist.h" />
     <ClInclude Include="ggl.h" />
     <ClInclude Include="objmodel.h" />
     <ClInclude Include="scene.h" />
@@ -168,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="displaylist.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="objmodel.cpp" />
     <ClCompile Include="scene.cpp" />
