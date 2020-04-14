@@ -162,7 +162,7 @@ void ObjModel::Draw()
 		angle = 0.0f;
 	}
 
-	//glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 	glEnable(GL_DEPTH_TEST);
 
 	// 在这里使用 push 和 pop Matrix 是为了不影响外面的矩阵

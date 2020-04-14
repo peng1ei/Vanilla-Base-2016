@@ -199,7 +199,7 @@ void Draw() {
 	// 重置模型视图矩阵
 	glLoadIdentity();
 	// 绘制之前清除颜色缓冲区
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT/*默认值为1.0f*/);
 
 	float currentTime = timeGetTime() / 1000.0f;
 	float timeElapse = currentTime - sTimeSinceStartUp;
